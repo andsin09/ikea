@@ -19,7 +19,7 @@ void printBill(int item_count, float final_cost) {
     else{
         cout << "Here is your bill." << endl;    
         cout << "\t Number of items ordered: " << item_count << endl;
-        cout << "\t Sub total: " << final_cost << endl;
+        cout << "\t Sub total: $" << round(final_cost) << endl;
         cout << "\t The NJ Sales Tax is 6.625%."<< endl;
         // Calculates extra sales tax cost by changing the sales tax percentage to a decimal and multiplying it by the total 
         cout << "\t Your final total is: $" << round(final_cost + (final_cost * 0.06625)) << endl;
@@ -83,11 +83,11 @@ int main() {
             cin >> cur_amount;
             total_items += cur_amount;
             total_cost+=sel2;
-            cout << cur_amount << " " << sel2 << " inch Blackout Curtain added." << endl;
+            cout << cur_amount << " " << sel2 << " inch Blackout Curtain/s added." << endl;
         }
         
         else if(selection == 3){
-            cout << "Tabletops chosen ($70). 1 for Wooden, 2 for Marble, 3 for Granite"<< endl;
+            cout << "Tabletops chosen ($70). 1 for Wooden, 2 for Marble, 3 for Granite (all cost the same)"<< endl;
             cin >> sel2;
             int cur_amount;
             if(sel2 == 1){
@@ -115,8 +115,8 @@ int main() {
             }
         }
 
-        else if( selection == 4){
-            cout << "Table Legs chosen ($20). 1 for Brown, 2 for Maroon, and 3 for Rust." << endl;
+        else if(selection == 4){
+            cout << "Table Legs chosen ($20). 1 for Brown, 2 for Maroon, and 3 for Rust (all cost the same)" << endl;
             cin >> sel2;
             int cur_amount;
             if(sel2 == 1){
